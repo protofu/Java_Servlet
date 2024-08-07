@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="javax.management.BadAttributeValueExpException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="com.olympic.dao.OlympicDAO"/>
+    <fullyQualifiedTypeName name="com.olympic.controller.OlympicServlet"/>
+    <fullyQualifiedTypeName name="com.olympic.service.OlympicService"/>
+    <fullyQualifiedTypeName name="com.olympic.model.International"/>
+    <fullyQualifiedTypeName name="com.olympic.service.OlympicServiceImpl"/>
+</qualifiedTypeNameHistroy>

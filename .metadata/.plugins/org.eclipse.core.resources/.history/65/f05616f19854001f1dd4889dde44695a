@@ -1,0 +1,5 @@
+package com.olympic.service;
+
+public interface OlympicService {
+
+}

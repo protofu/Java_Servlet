@@ -1,0 +1,6 @@
+1723020205918	Delete element
+1723020516509	Move 'InterDetail.jsp' to 'webapp'
+1723020522467	Move 'InterDetail.jsp' to 'WEB-INF'
+1723020532373	Rename resource 'Ranking.jsp'
+1723020632134	Move 2 resources to 'views'
+1723030544244	Extract local variable 'name'

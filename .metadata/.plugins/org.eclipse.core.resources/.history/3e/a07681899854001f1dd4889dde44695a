@@ -1,0 +1,12 @@
+package com.olympic.dao;
+
+import com.olympic.model.International;
+
+public interface OlympicDAO {
+	// 국가 추가
+	public void addInter(International international) throws Exception;
+	// 국가 삭제
+	// 메달 수정
+	// 국가 매달 합계 계산?
+	// 국가 순위별 정렬
+}

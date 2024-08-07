@@ -1,0 +1,39 @@
+package com.olympic.dao;
+
+import java.util.List;
+
+import com.olympic.model.International;
+
+public class OlympicDAOImpl implements OlympicDAO {
+
+	@Override
+	public void addInter(International international) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteInter(int id) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifyInter(International international) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int sumMedal(International international) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<International> getRank() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

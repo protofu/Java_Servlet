@@ -1,0 +1,46 @@
+package com.olympic.service;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.olympic.dao.OlympicDAO;
+import com.olympic.dao.OlympicDAOImpl;
+import com.olympic.model.International;
+
+public class OlympicServiceImpl implements OlympicService{
+	OlympicDAO od = new OlympicDAOImpl();
+	@Override
+	public void addInter(HttpServletRequest req) throws Exception {
+		String name = req.getParameter("name");
+		String flag = req.getParameter("flag");
+		System.out.println(req.getParameter("name") + " " + flag);
+		International in = new International(name, flag);
+		od.addInter(in);
+	}
+
+	@Override
+	public void deleteInter(HttpServletRequest req) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifyInter(HttpServletRequest req) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int sumMedal(HttpServletRequest req) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<International> getRank() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
