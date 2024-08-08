@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+.gold-medal {
+	color: #EB9B00;
+}
+
+.silver-medal {
+	color: #7C7C7C;
+}
+
+.bronze-medal {
+	color: #B87854;
+}
+
+.flag-inter {
+	width: 25px;
+	aspect-ratio: auto 35/35;
+	height: auto;
+}
+
+.flag-inter {
+	width: 30px;
+	height: 20px;
+	margin-right: 10px;
+	border-radius: 50%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 0 0 10px
+		rgba(255, 255, 255, 0.3);
+	background: radial-gradient(circle at 50% 50%, #fff, #ccc);
+	display: inline-block;
+}
+
+.collapse-button {
+	margin-top: 20px;
+}
+
+.medal-count {
+	text-align: center;
+}
+
+.badge-delete {
+	cursor: pointer;
+}
+
+.table-hover tbody tr:hover {
+	border: 2px solid yellow;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.table-top-color {
+	background: #BC9F8B;
+}
+
+.button-detail {
+	display: flex;
+	justify-content: space-between;
+	height: 40px;
+}
+
+.btn-custom {
+	height: 40px; /* 두 버튼의 높이를 동일하게 설정 */
+}
+
+.text-name {
+	text-decoration-line: none;
+	color: black;
+}

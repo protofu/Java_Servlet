@@ -7,11 +7,12 @@ import lombok.Data;
 @AllArgsConstructor
 public class International {
 	private int id;
-	private String name, flag;
+	private String name, flag, content;
 	private int gold, silver, bronze;
-	public International(String name, String flag) {
+	public International(String name, String flag, String content) {
 		super();
 		this.name = name;
 		this.flag = flag;
+		this.content = content;
 	}
 }

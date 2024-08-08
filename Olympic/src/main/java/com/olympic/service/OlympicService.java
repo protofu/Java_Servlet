@@ -17,4 +17,6 @@ public interface OlympicService {
 	int sumMedal(HttpServletRequest req) throws Exception;
 	// 국가 순위별 정렬
 	List<International> getRank() throws Exception;
+	// 국가 디테일
+	International getInter(HttpServletRequest req) throws Exception;
 }

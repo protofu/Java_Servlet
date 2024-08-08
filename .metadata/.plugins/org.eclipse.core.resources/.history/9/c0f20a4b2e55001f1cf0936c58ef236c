@@ -1,0 +1,18 @@
+package com.olympic.dao;
+
+import java.util.List;
+
+import com.olympic.model.International;
+
+public interface OlympicDAO {
+	// 국가 추가
+	void addInter(International international) throws Exception;
+	// 국가 삭제
+	void deleteInter(int id) throws Exception;
+	// 메달 수정
+	void modifyInter(International international) throws Exception;
+	// 국가 매달 합계 계산?
+	int sumMedal(International international) throws Exception;
+	// 국가 순위별 정렬
+	List<International> getRank() throws Exception;
+}

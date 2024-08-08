@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.gold-medal {
+	color: #EB9B00;
+}
+
+.silver-medal {
+	color: #7C7C7C;
+}
+
+.bronze-medal {
+	color: #B87854;
+}
+
+.flag-inter {
+	width: 50px;
+	
+}

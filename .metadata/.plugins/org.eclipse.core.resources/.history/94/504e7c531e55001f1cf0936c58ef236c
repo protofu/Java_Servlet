@@ -1,0 +1,71 @@
+package com.olympic.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.olympic.model.International;
+import com.olympic.util.ConnectionPool.DBPool;
+
+public class OlympicDAOImpl implements OlympicDAO {
+
+	@Override
+	public void addInter(International international) throws Exception {
+		String sql = "INSERT INTO olympic (name, flag) Values (?, ?)";
+		try (
+			Connection conn = DBPool.getDBPool();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+		){
+			pstmt.setString(1, international.getName());
+			pstmt.setString(2, international.getFlag());
+			pstmt.executeUpdate();
+		}
+		
+	}
+
+	@Override
+	public void deleteInter(int id) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifyInter(International international) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int sumMedal(International international) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<International> getRank() throws Exception {
+		String sql = "SELECT * FROM olympic";
+		List<International> interList = new ArrayList<>();
+		try (
+			Connection conn = DBPool.getDBPool();
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
+		){
+			while (rs.next()) {
+				International inter = new International(
+						rs.getInt("id"),
+						rs.getString("name"),
+						rs.getString("flag"),
+						rs.getString("content"),
+						rs.getInt("gold"),
+						rs.getInt("silver"),
+						rs.getInt("bronze")
+						);
+				interList.add(inter);
+			}
+		}
+		return interList;
+	}
+
+}

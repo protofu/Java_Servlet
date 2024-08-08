@@ -1,0 +1,60 @@
+package com.olympic.service;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.Part;
+
+import com.olympic.dao.OlympicDAO;
+import com.olympic.dao.OlympicDAOImpl;
+import com.olympic.model.International;
+
+public class OlympicServiceImpl implements OlympicService{
+	OlympicDAO od = new OlympicDAOImpl();
+	@Override
+	public void addInter(HttpServletRequest req) throws Exception {
+		String name = req.getParameter("name");
+//		String flag = req.getParameter("flag");
+		String content = req.getParameter("content");
+		
+		// 이미지 가져오기
+		Part part = req.getPart("flag");
+		String header = part.getHeader("content-disposition");
+		int start = header.indexOf("filename=");
+		String flag = header.substring(start+10, header.length()-1);
+//		System.out.println(flag);
+//		System.out.println(req.getParameter("name") + " " + flag);
+		
+		// 이미지 저장
+		if (flag != null && !flag.isEmpty()) {
+			part.write(flag);
+		}
+		
+		International in = new International(name, flag, content);
+		od.addInter(in);
+	}
+
+	@Override
+	public void deleteInter(HttpServletRequest req) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifyInter(HttpServletRequest req) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int sumMedal(HttpServletRequest req) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<International> getRank() throws Exception {
+		return od.getRank();;
+	}
+
+}

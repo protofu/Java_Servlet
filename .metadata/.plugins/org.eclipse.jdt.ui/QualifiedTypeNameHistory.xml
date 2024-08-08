@@ -7,6 +7,7 @@
     <fullyQualifiedTypeName name="com.olympic.dao.OlympicDAO"/>
     <fullyQualifiedTypeName name="com.olympic.controller.OlympicServlet"/>
     <fullyQualifiedTypeName name="com.olympic.service.OlympicService"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.olympic.model.International"/>
     <fullyQualifiedTypeName name="com.olympic.service.OlympicServiceImpl"/>
 </qualifiedTypeNameHistroy>

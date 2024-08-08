@@ -4,3 +4,5 @@
 1723020532373	Rename resource 'Ranking.jsp'
 1723020632134	Move 2 resources to 'views'
 1723030544244	Extract local variable 'name'
+1723077469190	Extract local variable 'rank'
+1723081678657	Extract local variable 'pstmt'

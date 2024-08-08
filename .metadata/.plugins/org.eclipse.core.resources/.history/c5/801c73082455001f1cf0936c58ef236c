@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.gold-medal {
+	color: #EB9B00;
+}
+
+.silver-medal {
+	color: #EB9B00;
+}
+
+.bronze-medal {
+	color: #EB9B00;
+}

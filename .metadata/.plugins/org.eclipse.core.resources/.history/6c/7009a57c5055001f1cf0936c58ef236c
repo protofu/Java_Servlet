@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.gold-medal {
+	color: #EB9B00;
+}
+
+.silver-medal {
+	color: #7C7C7C;
+}
+
+.bronze-medal {
+	color: #B87854;
+}
+
+.flag-inter {
+	width: 25px;
+	aspect-ratio: auto 35/35;
+	height: auto;
+}
+
+.flag-inter {
+	width: 30px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%; /* 완전한 원형으로 만듭니다 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 입체감을 주기 위한 그림자 */
+    border: 2px solid #fff; /* 외곽선을 추가하여 더 입체적으로 보이게 합니다 */
+}
+
+.collapse-button {
+	margin-top: 20px;
+}
+
+.medal-count {
+	text-align: center;
+}
+
+.badge-delete {
+	cursor: pointer;
+}
+
+.table-hover tbody tr:hover {
+	border: 2px solid yellow;
+	font-weight: bold;
+	font-size : 20px;
+}
+
+.table-top-color {
+	background: #BC9F8B;
+}

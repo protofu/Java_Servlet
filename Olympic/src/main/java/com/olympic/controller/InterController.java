@@ -6,12 +6,31 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class InterController implements OlympicController {
+import com.olympic.model.International;
+import com.olympic.service.OlympicService;
+import com.olympic.service.OlympicServiceImpl;
 
+public class InterController implements OlympicController {
+	OlympicService os = new OlympicServiceImpl();
 	@Override
 	public void process(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-
+		try {
+			String action = req.getParameter("action");
+			System.out.println(action);
+			if (action != null && action.equals("modifyInter")) {
+				os.modifyInter(req);
+				System.out.println("????");
+				res.sendRedirect("/olympic/inter-detail?id="+req.getParameter("id"));
+				return;
+			}
+			System.out.println("디테일");
+			International inter = os.getInter(req);
+			req.setAttribute("inter", inter);
+		} catch (Exception e) {
+			res.sendRedirect("/olympic/rank");
+		}
+		String view = "/WEB-INF/views/InterDetail.jsp";
+		req.getRequestDispatcher(view).forward(req, res);
 	}
 
 }
